@@ -13,7 +13,7 @@ app.use(bodyparser.urlencoded({ extended: true }));
 app.use(fileUpload())
 
 //Setting up config file
-if(process.env.NODE_ENV !== 'PRODUCTION') require('dotenv').dotenv.config({ path: 'backend/config/config.env' })
+if(process.env.NODE_ENV !== 'PRODUCTION') require('dotenv').config({ path: 'backend/config/config.env' })
 
 //Import all routes
 const products = require('./routes/product');
